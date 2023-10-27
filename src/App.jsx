@@ -1,90 +1,102 @@
-import { IconBrandLinkedin } from "@tabler/icons-react";
-import { IconBrandInstagram, IconBrandX } from "@tabler/icons-react";
-import { IconBrandFacebookFilled } from "@tabler/icons-react";
+import {
+  IconBrandFacebookFilled,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandX,
+} from "@tabler/icons-react";
+import { useState } from "react";
+import PerfilImage from "./components/PerfilImage";
+import About from "./components/About";
+import Proyects from "./components/Proyects";
+import Contatc from "./components/Contatc";
+import ButtomsChanges from "./components/ButtomsChanges";
 
 function App() {
+  const [isShowInfo, setIsShowInfo] = useState("Home");
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    const valueButtom = e.target.value;
+    setIsShowInfo(valueButtom);
+  };
+
   return (
-    <main className="relative font-['Poppins'] h-screen bg-black text-white overflow-y-scroll">
-      <header className="flex flex-col md:flex-row justify-between items-center">
-        <div className="flex items-center">
-          <img className="relative left-[-15%]" src="/logo.png" alt="" />
-          <h3 className="text-2xl uppercase text-[#FF2B51]">Anonyms</h3>
-        </div>
-        <h1 className="text-[#FF2B51] px-10 text-5xl flex flex-col text-center uppercase font-bold">
-          Matias <span>Zahn</span>
-        </h1>
-      </header>
-
-      <section>
-        <div className="relative grid place-items-center">
-          <img className="" src="/barrerRed.png" alt="hola" />
-          <div className="absolute ">
-            <img src="/barrerRed2.png" alt="hola" />
+    <main
+      className={`font-['Poppins'] h-screen  bg-black text-white  overflow-y-scroll `}
+    >
+      <section
+        className={`${
+          isShowInfo === "Home" ? "opacity-100 " : "opacity-0  hidden  "
+        } transition-all duration-500  `}
+      >
+        <header className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center">
+            <img
+              className="relative left-[-15%] max-w-[180px] md:max-w-none"
+              src="/logo.png"
+              alt=""
+            />
+            <h3 className="text-2xl uppercase text-redP">Anonyms</h3>
           </div>
-          <div className="absolute bottom-[-10%] -translate-x-5">
-            <img src="/perfil.png" alt="" />
+          <h1 className="text-redP px-10 text-5xl flex flex-col text-center uppercase font-bold">
+            Matias <span>Zahn</span>
+          </h1>
+        </header>
+
+        <div className="relative">
+          <PerfilImage />
+          <div>
+            <section className=" mt-10   flex justify-center items-center   lg:absolute top-1/2 lg:-translate-y-[150%]  right-0 lg:translate-x-1/4  lg:rotate-90">
+              <ButtomsChanges
+                isShowInfo={isShowInfo}
+                handleChange={handleChange}
+                value1={"About"}
+                value2={"Proyects"}
+                value3={"Contact"}
+              />
+            </section>
           </div>
         </div>
+
+        <section className="px-10  md:py-0  flex flex-col lg:flex-row md:justify-between">
+          <div className="text-center mt-10 lg:mt-0 lg:text-start ">
+            <h3 className="text-3xl font-semibold">Web Desinger</h3>
+            <h4 className="text-[#C0C0C0] text-2xl">
+              From <span className="text-redP">In</span>
+            </h4>
+          </div>
+
+          <div className="realtive z-10 flex items-center justify-center mt-5  gap-5">
+            <a
+              className="hover:text-redP transition-all duration-300 hover:-translate-y-2"
+              href=""
+            >
+              <IconBrandFacebookFilled size={40} />
+            </a>
+            <a
+              className="hover:text-redP transition-all duration-300 hover:-translate-y-2"
+              href=""
+            >
+              <IconBrandInstagram size={40} />
+            </a>
+            <a
+              className="hover:text-redP transition-all duration-300 hover:-translate-y-2"
+              href=""
+            >
+              <IconBrandX size={40} />
+            </a>
+            <a
+              className="hover:text-redP transition-all duration-300 hover:-translate-y-2"
+              href=""
+            >
+              <IconBrandLinkedin size={40} />
+            </a>
+          </div>
+        </section>
       </section>
-
-      <nav className="text-2xl mt-24 flex justify-center  uppercase lg:absolute top-[40%]  right-0 lg:rotate-90">
-        <div className="flex flex-col lg:flex-row gap-10">
-          <a
-            className="hover:text-[#FF2B51] transition-colors duration-300"
-            href=""
-          >
-            About
-          </a>
-          <a
-            className="hover:text-[#FF2B51] transition-colors duration-300"
-            href=""
-          >
-            Proyect
-          </a>
-          <a
-            className="hover:text-[#FF2B51] transition-colors duration-300"
-            href=""
-          >
-            Contact
-          </a>
-        </div>
-      </nav>
-
-      <section className="px-10 py-10 md:py-0  flex flex-col lg:flex-row lg:justify-between">
-        <div className="text-center mt-10 lg:mt-0 lg:text-start ">
-          <h3 className="text-3xl font-semibold">Web Desinger</h3>
-          <h4 className="text-[#C0C0C0] text-2xl">
-            From <span className="text-[#FF2B51]">In</span>
-          </h4>
-        </div>
-
-        <div className="flex items-center justify-center mt-5  gap-5">
-          <a
-            className="hover:text-[#FF2B51] transition-colors duration-300"
-            href=""
-          >
-            <IconBrandFacebookFilled size={40} />
-          </a>
-          <a
-            className="hover:text-[#FF2B51] transition-colors duration-300"
-            href=""
-          >
-            <IconBrandInstagram size={40} />
-          </a>
-          <a
-            className="hover:text-[#FF2B51] transition-colors duration-300"
-            href=""
-          >
-            <IconBrandX size={40} />
-          </a>
-          <a
-            className="hover:text-[#FF2B51] transition-colors duration-300"
-            href=""
-          >
-            <IconBrandLinkedin size={40} />
-          </a>
-        </div>
-      </section>
+        <About isShowInfo={isShowInfo} handleChange={handleChange} />
+        <Proyects isShowInfo={isShowInfo} handleChange={handleChange} />
+        <Contatc isShowInfo={isShowInfo} handleChange={handleChange} />
     </main>
   );
 }
