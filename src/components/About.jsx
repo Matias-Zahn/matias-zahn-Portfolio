@@ -7,9 +7,9 @@ function About({ isShowInfo, handleChange }) {
     <main
       className={`${
         isShowInfo === "About"
-          ? " opacity-100  translate-x-0  "
-          : "opacity-0  translate-x-full hidden "
-      } transition-all duration-500 p-4 text-white mt-4 `}
+          ? " opacity-100 p-4  -translate-y-0 mt-4 visible"
+          : "opacity-0  -translate-y-full invisible h-0  overflow-hidden "
+      } transition-all duration-500  text-white`}
     >
       <nav className="flex justify-center md:justify-end">
         <ButtomsChanges

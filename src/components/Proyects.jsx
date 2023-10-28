@@ -6,9 +6,9 @@ function Proyects({ isShowInfo, handleChange }) {
     <main
       className={`${
         isShowInfo === "Proyects"
-          ? " opacity-100  translate-y-0  h-screen"
-          : "opacity-0  translate-y-full h-0 hidden m-0 p-0"
-      } transition-all duration-500 p-4 text-white `}
+          ? " opacity-100  translate-y-0 p-4 visible  h-screen"
+          : "opacity-0  translate-y-full  h-0  overflow-hidden"
+      } transition-all duration-500  text-white `}
     >
       <div className="flex justify-center flex-wrap md:justify-between items-center mb-10 max-w-7xl mx-auto">
         <h2 className="text-5xl text-center ">Works And Proyects</h2>
@@ -21,7 +21,7 @@ function Proyects({ isShowInfo, handleChange }) {
         />
       </div>
 
-      <div className="grid justify-center text-center gap-4 mb-10">
+      <div className="grid justify-center text-center gap-6 mb-10">
         <h3 className="text-4xl">Tecnologys </h3>
         <h5 className="text-white/50 text-2xl">Tecnologias que uso diariamente</h5>
 

@@ -11,11 +11,11 @@ function Contatc({ isShowInfo, handleChange }) {
     <main
       className={`${
         isShowInfo === "Contact"
-          ? " opacity-100  translate-y-0 h-screen "
-          : "opacity-0 hidden  translate-y-full"
-      } transition-all duration-500  text-white grid grid-rows-[auto_1fr_auto] `}
+          ? " opacity-100  translate-y-0 visible h-screen"
+          : "opacity-0 translate-y-full invisible h-0 overflow-hidden"
+      } transition-all duration-500 grid grid-rows-[auto_1fr_auto]`}
     >
-
+      
       <nav className="flex justify-center py-2">
         <ButtomsChanges
           handleChange={handleChange}
@@ -24,11 +24,11 @@ function Contatc({ isShowInfo, handleChange }) {
           value3={"Proyects"}
         />
       </nav>
-      <div className="grid md:grid-cols-2 px3  place-items-center max-w-7xl mx-auto mb-10  gap-10  ">
+      <div className="grid md:grid-cols-2 px-3 place-items-center max-w-7xl mx-auto mb-10 gap-10 md:gap-0">
         <div className=" grid gap-5">
-          <h3 className="text-3xl font-semibold text-redP">Connect whith me</h3>
+          <h3 className="text-3xl font-semibold   text-redP">Connect whith me</h3>
           <h5 className="text-xl font-medium">Satisfied whith me? Please Contact me</h5>
-          <div className="flex gap-5 justify-center">
+          <div className="flex gap-10 justify-around md:justify-start">
             <a className="hover:-translate-y-2 transition-all duration-300 hover:text-redP" href="">
               <IconBrandInstagram size={40}  />{" "}
             </a>
@@ -50,7 +50,7 @@ function Contatc({ isShowInfo, handleChange }) {
             <input className="bg-white/10 p-4 rounded-2xl outline-none  "  type="email" placeholder="Email" />
             <input  className="bg-white/10 rounded-2xl p-4 py-6 outline-none " type="text" placeholder="Message" />
 
-            <button className="bg-redP font-medium w-[min(100%,_300px%)] py-2 rounded-[1rem] px-8 hover:bg-redP/50 transition-colors">
+            <button className="bg-redP font-medium md:w-72 py-2 rounded-[1rem] px-8 hover:bg-redP/50 transition-colors">
               Send
             </button>
           </form>
