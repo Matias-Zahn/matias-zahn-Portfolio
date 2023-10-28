@@ -16,7 +16,7 @@ function Contatc({ isShowInfo, handleChange }) {
       } transition-all duration-500 grid grid-rows-[auto_1fr_auto]`}
     >
       
-      <nav className="flex justify-center py-2">
+      <nav className="flex justify-center py-4 mb-6">
         <ButtomsChanges
           handleChange={handleChange}
           value1={"Home"}
@@ -26,7 +26,7 @@ function Contatc({ isShowInfo, handleChange }) {
       </nav>
       <div className="grid md:grid-cols-2 px-3 place-items-center max-w-7xl mx-auto mb-10 gap-10 md:gap-0">
         <div className=" grid gap-5">
-          <h3 className="text-3xl font-semibold   text-redP">Connect whith me</h3>
+          <h3 className="text-3xl font-semibold text-center md:text-start   text-redP">Connect whith me</h3>
           <h5 className="text-xl font-medium">Satisfied whith me? Please Contact me</h5>
           <div className="flex gap-10 justify-around md:justify-start">
             <a className="hover:-translate-y-2 transition-all duration-300 hover:text-redP" href="">
@@ -43,7 +43,7 @@ function Contatc({ isShowInfo, handleChange }) {
             </a>
           </div>
         </div>
-        <div className="grid gap-4">
+        <div className="grid gap-4 mb-10">
           <h3 className="text-2xl font-medium">Contact me, lets make magic together</h3>
           <form onSubmit={handleSubmit} className="grid gap-4">
             <input className="bg-white/10 p-4 rounded-2xl outline-none "  type="text" placeholder="Name" />
@@ -57,7 +57,7 @@ function Contatc({ isShowInfo, handleChange }) {
         </div>
       </div>
 
-      <footer className="flex flex-col bg-redP p-10 md:flex-row items-center  justify-between">
+      <footer className="flex flex-col bg-redP p-8 md:flex-row items-center gap-4  justify-between">
         <p>@2023 Matias Sebastian Zahn </p>
         <p>Fullstack developer </p>
         <p>UI Desinger </p>
