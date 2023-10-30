@@ -10,23 +10,45 @@ import About from "./components/About";
 import Proyects from "./components/Proyects";
 import Contatc from "./components/Contatc";
 import ButtomsChanges from "./components/ButtomsChanges";
+import Navbar from "./layouts/Navbar";
 
 function App() {
   const [isShowInfo, setIsShowInfo] = useState("Home");
-
+  const [scrolling, setScrolling] = useState(false);
+  const [isShowModal, setIsShowModal] = useState(false);
   const handleChange = (e) => {
     e.preventDefault();
     const valueButtom = e.target.value;
     setIsShowInfo(valueButtom);
+    setIsShowModal(false);
+  };
+  const handleClick = () => {
+    setIsShowModal(true)
+  };
+
+  const handleScroll = (e) => {
+    setScrolling(e.target.scrollTop);
   };
 
   return (
     <main
+      onScroll={handleScroll}
       className={`font-['Poppins'] h-screen  bg-black text-white  overflow-y-scroll  `}
     >
+      {isShowInfo !== "Home" && (
+        <Navbar
+          handleClick={handleClick}
+          isShowModal={isShowModal}
+          setIsShowModal={setIsShowModal}
+          scrolling={scrolling}
+          handleChange={handleChange}
+        />
+      )}
       <section
         className={`${
-          isShowInfo === "Home" ? "opacity-100 pb-10 " : "opacity-0 h-0  overflow-hidden"
+          isShowInfo === "Home"
+            ? "opacity-100 pb-10 "
+            : "opacity-0 h-0  overflow-hidden"
         } transition-all duration-500  `}
       >
         <header className="flex flex-col md:flex-row justify-between items-center">
@@ -94,9 +116,13 @@ function App() {
           </div>
         </section>
       </section>
-        <About isShowInfo={isShowInfo} handleChange={handleChange} />
-        <Proyects isShowInfo={isShowInfo} handleChange={handleChange} />
-        <Contatc isShowInfo={isShowInfo} handleChange={handleChange} />
+      <About
+        isShowInfo={isShowInfo}
+        handleChange={handleChange}
+        scrolling={scrolling}
+      />
+      <Proyects isShowInfo={isShowInfo} handleChange={handleChange} />
+      <Contatc isShowInfo={isShowInfo} handleChange={handleChange} />
     </main>
   );
 }

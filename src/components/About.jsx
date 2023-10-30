@@ -1,25 +1,19 @@
-import ButtomsChanges from "./ButtomsChanges";
 import PathCard from "./PathCard";
 import PerfilImage from "./PerfilImage";
 
-function About({ isShowInfo, handleChange }) {
+function About({ isShowInfo  }) {
   return (
     <main
       className={`${
         isShowInfo === "About"
-          ? " opacity-100 p-4  -translate-y-0 mt-4 visible"
-          : "opacity-0  -translate-y-full invisible h-0  overflow-hidden "
-      } transition-all duration-500  text-white`}
+          ? " opacity-100   translate-y-0  visible "
+          : "opacity-0  translate-y-full invisible h-0  overflow-hidden "
+      } transition-all duration-500  text-white `}
+      
+      
     >
-      <nav className="flex justify-center md:justify-end">
-        <ButtomsChanges
-          handleChange={handleChange}
-          value1={"Home"}
-          value2={"Proyects"}
-          value3={"Contact"}
-        />
-      </nav>
-      <section className="grid gap-6 md:grid-cols-2 items-center  ">
+
+      <section className="grid gap-6 md:grid-cols-2 p-4 items-center">
         <PerfilImage />
 
         <div className="grid gap-4 mt-">
@@ -54,7 +48,7 @@ function About({ isShowInfo, handleChange }) {
         </div>
       </section>
 
-      <section className="mt-20">
+      <section className="mt-20 p-4">
         <h2 className="text-5xl font-extrabold text-center mb-10">
           Path to here{" "}
         </h2>

@@ -1,7 +1,6 @@
 import { IconBrandFacebookFilled, IconBrandInstagram, IconBrandTwitter, IconBrandWhatsapp } from "@tabler/icons-react";
-import ButtomsChanges from "./ButtomsChanges";
 
-function Contatc({ isShowInfo, handleChange }) {
+function Contatc({ isShowInfo }) {
 
   const handleSubmit= (e) => {
     e.preventDefault()
@@ -13,18 +12,10 @@ function Contatc({ isShowInfo, handleChange }) {
         isShowInfo === "Contact"
           ? " opacity-100  translate-y-0 visible h-screen"
           : "opacity-0 translate-y-full invisible h-0 overflow-hidden"
-      } transition-all duration-500 grid grid-rows-[auto_1fr_auto]`}
+      } transition-all duration-500 flex flex-col`}
     >
       
-      <nav className="flex justify-center py-4 mb-6">
-        <ButtomsChanges
-          handleChange={handleChange}
-          value1={"Home"}
-          value2={"About"}
-          value3={"Proyects"}
-        />
-      </nav>
-      <div className="grid md:grid-cols-2 px-3 place-items-center max-w-7xl mx-auto mb-10 gap-10 md:gap-0">
+      <div className="grid md:grid-cols-2 px-3 place-items-center max-w-7xl mx-auto mb-10 gap-10 md:gap-0 flex-1">
         <div className=" grid gap-5">
           <h3 className="text-3xl font-semibold text-center md:text-start   text-redP">Connect whith me</h3>
           <h5 className="text-xl font-medium">Satisfied whith me? Please Contact me</h5>
@@ -57,7 +48,7 @@ function Contatc({ isShowInfo, handleChange }) {
         </div>
       </div>
 
-      <footer className="flex flex-col bg-redP p-8 md:flex-row items-center gap-4  justify-between">
+      <footer className="flex flex-col bg-redP p-4 px-10 md:flex-row items-center gap-4 text-lg justify-between">
         <p>@2023 Matias Sebastian Zahn </p>
         <p>Fullstack developer </p>
         <p>UI Desinger </p>
