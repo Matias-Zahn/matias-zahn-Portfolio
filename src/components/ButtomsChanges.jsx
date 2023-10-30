@@ -3,7 +3,7 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
     <div className="relative z-20 flex flex-col   md:flex-row gap-4 lg:gap-10 text-3xl">
       {isShowInfo !== "Home" && (
         <button
-          className={`hover:text-yellow-200 uppercase p-4  duration-300 transition-all ${
+          className={`hover:text-yellow-200 ${isShowInfo === 'Home' ? 'text-yellow-400': 'text-white'} uppercase p-4  duration-300 transition-all ${
             isShowInfo === "Home" && "lg:hover:-rotate-90"
           } `}
           onClick={handleChange}
@@ -13,7 +13,7 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
         </button>
       )}
       <button
-        className={`hover:text-yellow-200 uppercase p-4   duration-300 transition-all ${
+        className={`hover:text-yellow-200 ${isShowInfo === 'About' ? 'text-yellow-400': 'text-white'} uppercase p-4   duration-300 transition-all ${
           isShowInfo === "Home" && "lg:hover:-rotate-90"
         } `}
         onClick={handleChange}
@@ -22,7 +22,7 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
         About
       </button>
       <button
-        className={`hover:text-yellow-200  uppercase p-4   duration-300 transition-all ${
+        className={`hover:text-yellow-200 ${isShowInfo === 'Proyects' ? 'text-yellow-400': 'text-white'}  uppercase p-4   duration-300 transition-all ${
           isShowInfo === "Home" && "lg:hover:-rotate-90"
         } `}
         onClick={handleChange}
@@ -31,7 +31,7 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
         Proyects
       </button>
       <button
-        className={`hover:text-yellow-200  uppercase p-4   duration-300 transition-all ${
+        className={`hover:text-yellow-200 ${isShowInfo === 'Contact' ? 'text-yellow-400': 'text-white'}  uppercase p-4   duration-300 transition-all ${
           isShowInfo === "Home" && "lg:hover:-rotate-90"
         } `}
         onClick={handleChange}

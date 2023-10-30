@@ -1,7 +1,7 @@
 import { IconApps } from "@tabler/icons-react";
 import ButtomsChanges from "../components/ButtomsChanges";
 import MenuNavBar from "./MenuNavBar";
-function Navbar({ handleChange, scrolling, isShowModal, setIsShowModal }) {
+function Navbar({ handleChange, scrolling, isShowModal, setIsShowModal, isShowInfo }) {
   const handleModal = () => {
     setIsShowModal(true);
   };
@@ -15,7 +15,7 @@ function Navbar({ handleChange, scrolling, isShowModal, setIsShowModal }) {
     <div className="h-20 md:h-20">
       <nav className={` ${NAVBAR_TRANSITION} `}>
         <div className="hidden md:block">
-          <ButtomsChanges handleChange={handleChange} />
+          <ButtomsChanges isShowInfo={isShowInfo} handleChange={handleChange} />
         </div>
         <div className="flex justify-between w-full px-5 py-4 md:hidden">
           <h4 className="text-3xl">Matias Zahn</h4>
@@ -25,7 +25,7 @@ function Navbar({ handleChange, scrolling, isShowModal, setIsShowModal }) {
           </button>
         </div>
       </nav>
-      <MenuNavBar isShowModal={isShowModal}  handleChange={handleChange} />
+      <MenuNavBar isShowModal={isShowModal} isShowInfo={isShowInfo}  handleChange={handleChange} />
     </div>
   );
 }

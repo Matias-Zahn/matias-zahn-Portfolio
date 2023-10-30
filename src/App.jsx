@@ -42,12 +42,13 @@ function App() {
           setIsShowModal={setIsShowModal}
           scrolling={scrolling}
           handleChange={handleChange}
+          isShowInfo={isShowInfo}
         />
       )}
       <section
         className={`${
           isShowInfo === "Home"
-            ? "opacity-100 pb-10 "
+            ? "opacity-100 p-2 "
             : "opacity-0 h-0  overflow-hidden"
         } transition-all duration-500  `}
       >
