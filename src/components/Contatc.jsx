@@ -12,10 +12,10 @@ function Contatc({ isShowInfo }) {
         isShowInfo === "Contact"
           ? " opacity-100  translate-y-0 visible h-screen"
           : "opacity-0 translate-y-full invisible h-0 overflow-hidden"
-      } transition-all duration-500 flex flex-col`}
+      } transition-all duration-500 grid grid-rows-[1fr_auto] `}
     >
       
-      <div className="grid md:grid-cols-2 px-3 place-items-center max-w-7xl mx-auto mb-10 gap-10 md:gap-0 flex-1">
+      <div className="grid md:grid-cols-2 px-3 place-items-center max-w-7xl mx-auto mb-10 gap-10 md:gap-0 ">
         <div className=" grid gap-5">
           <h3 className="text-3xl font-semibold text-center md:text-start   text-redP">Connect whith me</h3>
           <h5 className="text-xl font-medium">Satisfied whith me? Please Contact me</h5>

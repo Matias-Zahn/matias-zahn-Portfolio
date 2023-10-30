@@ -33,7 +33,7 @@ function App() {
   return (
     <main
       onScroll={handleScroll}
-      className={`font-['Poppins'] h-screen  bg-black text-white  overflow-y-scroll  `}
+      className={`font-['Poppins'] h-screen  bg-black text-white  overflow-y-scroll  ${isShowInfo === 'Contact' && 'grid md:grid-rows-1'}`}
     >
       {isShowInfo !== "Home" && (
         <Navbar
