@@ -48,7 +48,7 @@ function Contatc({ isShowInfo }) {
         </div>
       </div>
 
-      <footer className="flex flex-col bg-redP p-4 px-10 md:flex-row items-center gap-4 text-lg justify-between">
+      <footer className=" flex flex-col bg-redP p-4 px-10 md:flex-row items-center gap-4 text-lg justify-between">
         <p>@2023 Matias Sebastian Zahn </p>
         <p>Fullstack developer </p>
         <p>UI Desinger </p>
