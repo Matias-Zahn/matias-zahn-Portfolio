@@ -9,7 +9,7 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
           onClick={handleChange}
           value={"Home"}
         >
-          Home
+          Inicio
         </button>
       )}
       <button
@@ -19,7 +19,8 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
         onClick={handleChange}
         value={"About"}
       >
-        About
+        Sobre Mi
+        <div className={isShowInfo === 'About' ? 'bg-white h-1 w-full opacity-100 translate-x-0 duration-500 transition-all' : 'opacity-0 translate-x-full' }> </div>
       </button>
       <button
         className={`hover:text-yellow-200 ${isShowInfo === 'Proyects' ? 'text-yellow-400': 'text-white'}  uppercase p-4   duration-300 transition-all ${
@@ -28,7 +29,8 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
         onClick={handleChange}
         value={"Proyects"}
       >
-        Proyects
+        Proyectos
+        <div className={isShowInfo === 'Proyects' ? 'bg-white h-1 w-full opacity-100 translate-x-0 duration-500 transition-all' : 'opacity-0 translate-x-full' }> </div>
       </button>
       <button
         className={`hover:text-yellow-200 ${isShowInfo === 'Contact' ? 'text-yellow-400': 'text-white'}  uppercase p-4   duration-300 transition-all ${
@@ -37,7 +39,8 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
         onClick={handleChange}
         value={"Contact"}
       >
-        Contact
+        Contacto
+        <div className={isShowInfo === 'Contact' ? 'bg-white h-1 w-full opacity-100 translate-x-0 duration-500 transition-all' : 'opacity-0 translate-x-full' }> </div>
       </button>
     </div>
   );

@@ -1,6 +1,9 @@
+import { proyectsList } from "../constants/proyectsList";
 import ProyectsCard from "./ProyectsCard";
 
 function Proyects({ isShowInfo }) {
+
+  
   return (
     <main
       className={`${
@@ -10,9 +13,9 @@ function Proyects({ isShowInfo }) {
       } transition-all duration-500  text-white `}
     >
       <div className="grid justify-center text-center gap-6 mb-10">
-        <h3 className="text-4xl">Tecnologys </h3>
+        <h3 className="text-4xl">Tecnologías </h3>
         <h5 className="text-white/50 text-2xl">
-          Tecnologias que uso diariamente
+          Tecnologías que uso diariamente
         </h5>
 
         <div className="flex flex-wrap justify-center gap-8 text-redP/50">
@@ -26,20 +29,19 @@ function Proyects({ isShowInfo }) {
         </div>
       </div>
       <div className="grid justify-center text-center gap-4 mb-5">
-        <h3 className="text-4xl">Proyects </h3>
+        <h3 className="text-4xl">Proyectos </h3>
         <h5 className="text-white/50 text-2xl">
           Trabajos y proyectos a lo largo de mi trayectoria
         </h5>
       </div>
-      <div className="grid grid-cols-[repeat(auto-fit,_300px)] justify-center gap-5 pb-10  max-w-[1300px] mx-auto my-auto ">
-        <ProyectsCard />
-        <ProyectsCard />
-        <ProyectsCard />
-        <ProyectsCard />
-        <ProyectsCard />
-        <ProyectsCard />
-        <ProyectsCard />
-        <ProyectsCard />
+      <div className="grid grid-cols-[repeat(auto-fit,_350px)] justify-center gap-5 pb-10  max-w-[1100px] mx-auto my-auto ">
+
+        {
+          proyectsList.map((proyect, index)  => <ProyectsCard proyect={proyect} key={index}  /> )
+
+          
+        }
+
       </div>
     </main>
   );

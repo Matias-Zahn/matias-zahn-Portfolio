@@ -48,9 +48,9 @@ function App() {
       <section
         className={`${
           isShowInfo === "Home"
-            ? "opacity-100 p-2 "
+            ? "opacity-100 p-2 md:p-0 "
             : "opacity-0 h-0  overflow-hidden"
-        } transition-all duration-500  `}
+        } transition-all duration-500 `}
       >
         <header className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center">
