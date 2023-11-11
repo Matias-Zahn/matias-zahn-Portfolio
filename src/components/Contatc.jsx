@@ -17,8 +17,8 @@ function Contatc({ isShowInfo }) {
       
       <div className="grid md:grid-cols-2 px-3 place-items-center max-w-7xl mx-auto mb-10 gap-10 md:gap-0 ">
         <div className=" grid gap-5">
-          <h3 className="text-3xl font-semibold text-center md:text-start   text-redP">Connect whith me</h3>
-          <h5 className="text-xl font-medium">Satisfied whith me? Please Contact me</h5>
+          <h3 className="text-3xl font-semibold text-center md:text-start   text-redP">Conecta conmigo</h3>
+          <h5 className="text-xl font-medium">Satisfecho conmigo? Por favor contactame</h5>
           <div className="flex gap-10 justify-around md:justify-start">
             <a className="hover:-translate-y-2 transition-all duration-300 hover:text-redP" href="">
               <IconBrandInstagram size={40}  />{" "}
@@ -35,7 +35,7 @@ function Contatc({ isShowInfo }) {
           </div>
         </div>
         <div className="grid gap-4 mb-10">
-          <h3 className="text-2xl font-medium">Contact me, lets make magic together</h3>
+          <h3 className="text-2xl font-medium">Contactame, hagamos magia juntos</h3>
           <form onSubmit={handleSubmit} className="grid gap-4">
             <input className="bg-white/10 p-4 rounded-2xl outline-none "  type="text" placeholder="Name" />
             <input className="bg-white/10 p-4 rounded-2xl outline-none  "  type="email" placeholder="Email" />
