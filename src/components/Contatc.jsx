@@ -37,9 +37,9 @@ function Contatc({ isShowInfo }) {
         <div className="grid gap-4 mb-10">
           <h3 className="text-2xl font-medium">Contactame, hagamos magia juntos</h3>
           <form onSubmit={handleSubmit} className="grid gap-4">
-            <input className="bg-white/10 p-4 rounded-2xl outline-none "  type="text" placeholder="Name" />
+            <input className="bg-white/10 p-4 rounded-2xl outline-none "  type="text" placeholder="Nombre" />
             <input className="bg-white/10 p-4 rounded-2xl outline-none  "  type="email" placeholder="Email" />
-            <input  className="bg-white/10 rounded-2xl p-4 py-6 outline-none " type="text" placeholder="Message" />
+            <input  className="bg-white/10 rounded-2xl p-4 py-6 outline-none " type="text" placeholder="Mensaje" />
 
             <button className="bg-redP font-medium md:w-72 py-2 rounded-[1rem] px-8 hover:bg-redP/50 transition-colors">
               Send
