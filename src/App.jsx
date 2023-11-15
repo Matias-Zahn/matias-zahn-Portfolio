@@ -1,15 +1,13 @@
 import {
-  IconBrandFacebookFilled,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconBrandX,
+  IconBrandGithub,
+  IconBrandLinkedin
 } from "@tabler/icons-react";
 import { useState } from "react";
-import PerfilImage from "./components/PerfilImage";
 import About from "./components/About";
-import Proyects from "./components/Proyects";
-import Contatc from "./components/Contatc";
 import ButtomsChanges from "./components/ButtomsChanges";
+import Contatc from "./components/Contatc";
+import PerfilImage from "./components/PerfilImage";
+import Proyects from "./components/Proyects";
 import Navbar from "./layouts/Navbar";
 
 function App() {
@@ -89,28 +87,18 @@ function App() {
             </h4>
           </div>
 
-          <div className="realtive z-10 flex items-center justify-center mt-5  gap-5">
+          <div className="realtive z-10 flex items-center justify-center mt-5 md:mr-10  gap-5">
             <a
               className="hover:text-redP transition-all duration-300 hover:-translate-y-2"
-              href=""
+              href="https://github.com/Matias-Zahn"
+              target="blank"
             >
-              <IconBrandFacebookFilled size={40} />
+              <IconBrandGithub size={40} />
             </a>
             <a
               className="hover:text-redP transition-all duration-300 hover:-translate-y-2"
-              href=""
-            >
-              <IconBrandInstagram size={40} />
-            </a>
-            <a
-              className="hover:text-redP transition-all duration-300 hover:-translate-y-2"
-              href=""
-            >
-              <IconBrandX size={40} />
-            </a>
-            <a
-              className="hover:text-redP transition-all duration-300 hover:-translate-y-2"
-              href=""
+              href="https://www.linkedin.com/in/matias-zahn/"
+              target="blank"
             >
               <IconBrandLinkedin size={40} />
             </a>

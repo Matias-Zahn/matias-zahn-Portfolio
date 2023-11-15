@@ -39,10 +39,10 @@ function About({ isShowInfo }) {
         <h2 className="text-5xl  font-extrabold text-center mb-10">
           Mi camino{" "}
         </h2>
-        <div className="grid md:grid-cols-2  justify-center gap-10  max-w-[1500px] mx-auto my-auto">
+        <div className="grid md:grid-cols-2 items-center  justify-center gap-10  max-w-[1500px] mx-auto my-auto">
           <div className="grid gap-4">
             <h4 className="text-3xl ">Area Profesional</h4>
-            <h5 className="text-white/50">2016-Actualmente</h5>
+            <h5 className="text-white/50">Exeperiencia Laboral</h5>
             <div className="grid gap-5">
                 {
                   infoListPro.map((professional, index) => <PathCard key={index} academy={professional} />)
@@ -51,7 +51,7 @@ function About({ isShowInfo }) {
           </div>
           <div className="grid gap-4">
             <h4 className="text-3xl">Area Academica</h4>
-            <h5 className="text-white/50">2022-Actualmente</h5>
+            <h5 className="text-white/50">Desarrollo web</h5>
             <div className="grid gap-5">
               {
                 infoList.map((academy, index) => <PathCard key={index} academy={academy} />)
