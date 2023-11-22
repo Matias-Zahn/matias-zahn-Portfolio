@@ -13,8 +13,8 @@ function ProyectsCard({ proyect }) {
   const [isHover, setIsHover] = useState(false);
 
   const optionsTecnologys={
-    'React': <IconBrandJavascript />,
-    'Javascript': <IconBrandReact />,
+    'React': <IconBrandReact />,
+    'Javascript': <IconBrandJavascript />,
     'HTML': <IconBrandHtml5 />,
     'CSS': <IconBrandCss3 />,
     'TailwindCSS': <IconBrandTailwind />
