@@ -15,21 +15,24 @@ function About({ isShowInfo }) {
         <PerfilImage />
 
         <div className="grid gap-4 mt-">
-          <h2 className="text-2xl text-[#FF2B51]">About Me</h2>
+          <h2 className="text-2xl text-[#FF2B51]">Sobre mí</h2>
           <h1 className="text-5xl">Matias Sebastian Zahn</h1>
           <div className="leading-relaxed grid gap-2">
             <p>
-              Apasionado por la programacion y los nuevos caminos que
-              constantemente intento abrir para lograr una nueva experiencia
-              enriquecedora.
+              Me destaco por tener una gran pasión por la programacion y el
+              aprendizaje. Mi enfoque proactivo me ha ayudado a poder
+              desarrollar diferentes proyectos personales y profesionales.
             </p>
             <p>
-              Actualmente cuento con expereiencias en tecnologias desarroladas
-              para el Front-end.
+              Actualmente, cuento con experiencias en tecnologías que me
+              destacan como un programador full stack. Mi trayectoria abarca
+              tanto el desarrollo del lado del cliente como del servidor,
+              permitiéndome crear soluciones integrales y versátiles.
             </p>
             <p>
-              Aun asi, sigo con la misma motivacion de aprender desde el primer
-              dia!
+              Estoy emocionado por la oportunidad de aplicar mis habilidades y
+              conocimientos en un entorno dinámico y desafiante, contribuyendo
+              al crecimiento y la excelencia de su organización.
             </p>
           </div>
         </div>
@@ -39,23 +42,23 @@ function About({ isShowInfo }) {
         <h2 className="text-5xl  font-extrabold text-center mb-10">
           Mi camino{" "}
         </h2>
-        <div className="grid md:grid-cols-2 items-center  justify-center gap-10  max-w-[1500px] mx-auto my-auto">
+        <div className="grid md:grid-cols-2 items-center   gap-10  max-w-[1500px] mx-auto my-auto">
           <div className="grid gap-4">
-            <h4 className="text-3xl ">Area Profesional</h4>
-            <h5 className="text-white/50">Exeperiencia Laboral</h5>
+            <h4 className="text-3xl text-center ">Área Profesional</h4>
+            <h5 className="text-white/50 text-center">Exeperiencia Laboral</h5>
             <div className="grid gap-5">
-                {
-                  infoListPro.map((professional, index) => <PathCard key={index} academy={professional} />)
-                }
+              {infoListPro.map((professional, index) => (
+                <PathCard key={index} academy={professional} />
+              ))}
             </div>
           </div>
           <div className="grid gap-4">
-            <h4 className="text-3xl">Area Academica</h4>
-            <h5 className="text-white/50">Desarrollo web</h5>
+            <h4 className="text-3xl text-center">Área Académica</h4>
+            <h5 className="text-white/50 text-center">Desarrollo web</h5>
             <div className="grid gap-5">
-              {
-                infoList.map((academy, index) => <PathCard key={index} academy={academy} />)
-              }
+              {infoList.map((academy, index) => (
+                <PathCard key={index} academy={academy} />
+              ))}
             </div>
           </div>
         </div>

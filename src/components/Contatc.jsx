@@ -43,10 +43,10 @@ function Contatc({ isShowInfo }) {
       <section className="grid md:grid-cols-2 px-3 place-items-center max-w-7xl mx-auto mb-10 gap-10 ">
         <div className=" grid gap-5 ">
           <h3 className="text-3xl font-semibold text-center md:text-start   text-redP">
-            Conecta conmigo
+            ¿Satisfecho conmigo?
           </h3>
           <h5 className="text-xl font-medium">
-            Satisfecho conmigo? Por favor contactame
+            Por favor, ponte en contacto conmigo
           </h5>
           <div className="flex gap-5 justify-around md:justify-start">
             <a
@@ -67,7 +67,7 @@ function Contatc({ isShowInfo }) {
         </div>
         <div className="grid gap-4 mb-10">
           <h3 className="text-2xl font-medium">
-            Contactame, hagamos magia juntos
+            Contáctame, hagamos magia juntos
           </h3>
           <form ref={refForm} onSubmit={handleSubmit} className="grid gap-4">
             <input
