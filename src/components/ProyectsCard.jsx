@@ -5,20 +5,20 @@ import {
   IconBrandVercel,
   IconBrandHtml5,
   IconBrandCss3,
-  IconBrandTailwind
+  IconBrandTailwind,
 } from "@tabler/icons-react";
 import { useState } from "react";
 
 function ProyectsCard({ proyect }) {
   const [isHover, setIsHover] = useState(false);
 
-  const optionsTecnologys={
-    'React': <IconBrandReact />,
-    'Javascript': <IconBrandJavascript />,
-    'HTML': <IconBrandHtml5 />,
-    'CSS': <IconBrandCss3 />,
-    'TailwindCSS': <IconBrandTailwind />
-  }
+  const optionsTecnologys = {
+    React: <IconBrandReact />,
+    Javascript: <IconBrandJavascript />,
+    HTML: <IconBrandHtml5 />,
+    CSS: <IconBrandCss3 />,
+    TailwindCSS: <IconBrandTailwind />,
+  };
 
   return (
     <section
@@ -36,7 +36,6 @@ function ProyectsCard({ proyect }) {
             className="bg-redP/10 text-redP  py-2 px-4 rounded-2xl flex gap-2"
           >
             {tecnology} {optionsTecnologys[tecnology]}
-            
           </h4>
         ))}
       </div>
@@ -53,10 +52,10 @@ function ProyectsCard({ proyect }) {
             : "invisible opacity-0 translate-y-full"
         } `}
       >
-        <div className=" font-semibold">
+        <div className=" font-semibold text-white">
           <p>{proyect.description}</p>
         </div>
-        <div className="flex justify-end gap-2  ">
+        <div className="flex justify-end gap-2 text-white  ">
           <a
             className="p-2 bg-black border-white border rounded-full hover:bg-white hover:text-black transition-all"
             href={proyect.urlGit}

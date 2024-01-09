@@ -9,7 +9,7 @@ function About({ isShowInfo }) {
         isShowInfo === "About"
           ? " opacity-100   translate-y-0  visible  "
           : "opacity-0  translate-y-full invisible h-0  overflow-hidden "
-      } transition-all duration-500  text-white `}
+      } transition-all duration-500 text-black  dark:text-white `}
     >
       <section className="grid gap-10 md:grid-cols-2 mx-auto max-w-7xl p-4 items-center">
         <PerfilImage />

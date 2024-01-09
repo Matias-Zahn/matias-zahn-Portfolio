@@ -1,19 +1,20 @@
-import {
-  IconBrandGithub,
-  IconBrandLinkedin
-} from "@tabler/icons-react";
-import { useState } from "react";
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import { useEffect, useState } from "react";
 import About from "./components/About";
 import ButtomsChanges from "./components/ButtomsChanges";
 import Contatc from "./components/Contatc";
 import PerfilImage from "./components/PerfilImage";
 import Proyects from "./components/Proyects";
+import Settings from "./components/Settings";
 import Navbar from "./layouts/Navbar";
 
 function App() {
   const [isShowInfo, setIsShowInfo] = useState("Home");
   const [scrolling, setScrolling] = useState(false);
   const [isShowModal, setIsShowModal] = useState(false);
+  const [setting, setSetting] = useState(false);
+  const [theme, setTheme] = useState("dark");
+
   const handleChange = (e) => {
     e.preventDefault();
     const valueButtom = e.target.value;
@@ -21,17 +22,36 @@ function App() {
     setIsShowModal(false);
   };
   const handleClick = () => {
-    setIsShowModal(true)
+    setIsShowModal(true);
   };
 
   const handleScroll = (e) => {
     setScrolling(e.target.scrollTop);
   };
 
+  const handleChangeTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+    setSetting(false);
+  };
+
+  const handleShowSetting = () => {
+    setSetting(!setting);
+  };
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.querySelector("html").classList.add("dark");
+    } else {
+      document.querySelector("html").classList.remove("dark");
+    }
+  }, [theme]);
+
   return (
     <main
       onScroll={handleScroll}
-      className={`font-['Poppins'] h-screen  bg-black text-white  overflow-y-scroll  ${isShowInfo === 'Contact' && 'grid md:grid-rows-1'}`}
+      className={`font-['Poppins'] h-screen bg-gray-300 dark:bg-black dark:text-white  overflow-y-scroll  ${
+        isShowInfo === "Contact" && "grid md:grid-rows-1"
+      }`}
     >
       {isShowInfo !== "Home" && (
         <Navbar
@@ -59,9 +79,12 @@ function App() {
             />
             <h3 className="text-2xl uppercase text-redP">Anonyms</h3>
           </div>
-          <h1 className="text-redP px-10 text-5xl flex flex-col text-center uppercase font-bold">
-            Matias <span>Zahn</span>
-          </h1>
+          <Settings
+            setting={setting}
+            handleShowSetting={handleShowSetting}
+            handleChangeTheme={handleChangeTheme}
+            theme={theme}
+          />
         </header>
 
         <div className="relative">
