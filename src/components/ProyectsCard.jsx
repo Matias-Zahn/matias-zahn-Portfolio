@@ -1,15 +1,18 @@
 import {
-  IconBrandGithub,
-  IconBrandJavascript,
-  IconBrandReact,
-  IconBrandVercel,
-  IconBrandHtml5,
   IconBrandCss3,
+  IconBrandGithub,
+  IconBrandHtml5,
+  IconBrandJavascript,
+  IconBrandNodejs,
+  IconBrandReact,
   IconBrandTailwind,
+  IconBrandVercel,
+  IconDatabase,
+  IconDialpad,
 } from "@tabler/icons-react";
 import { useState } from "react";
 
-function ProyectsCard({ proyect }) {
+function ProyectsCard({ proyect, modalProyect }) {
   const [isHover, setIsHover] = useState(false);
 
   const optionsTecnologys = {
@@ -18,6 +21,10 @@ function ProyectsCard({ proyect }) {
     HTML: <IconBrandHtml5 />,
     CSS: <IconBrandCss3 />,
     TailwindCSS: <IconBrandTailwind />,
+    Node: <IconBrandNodejs />,
+    Express: <IconBrandNodejs />,
+    Sequelize: <IconDialpad />,
+    PostgreSQL: <IconDatabase />,
   };
 
   return (
@@ -65,12 +72,14 @@ function ProyectsCard({ proyect }) {
             <IconBrandGithub />
           </a>
           <a
-            className="p-2 bg-black border-white border rounded-full hover:bg-white hover:text-black transition-all"
+            className={`p-2 bg-black border-white border rounded-full hover:bg-white hover:text-black transition-all ${
+              modalProyect && "h-0 overflow-hidden p-0 invisible"
+            } `}
             href={proyect.url}
             target="blank"
           >
             {" "}
-            <IconBrandVercel />
+            {!modalProyect && <IconBrandVercel />}
           </a>
         </div>
       </div>

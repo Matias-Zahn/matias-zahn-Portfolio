@@ -1,8 +1,8 @@
 function PerfilImage() {
   return (
     <picture>
-      <div className="relative   grid place-items-center">
-        <img className="" src="/barrerRed.png" alt="hola" />
+      <div className="relative  grid place-items-center">
+        <img className="object-cover" src="/barrerRed.png" alt="hola" />
         <div className="absolute  animate-pulse ">
           <img src="/barrerRed2.png" alt="hola" />
         </div>

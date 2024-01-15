@@ -1,7 +1,10 @@
-import { proyectsList } from "../constants/proyectsList";
+import { useState } from "react";
+import { proyectsListBack, proyectsListFront } from "../constants/proyectsList";
 import ProyectsCard from "./ProyectsCard";
 
 function Proyects({ isShowInfo }) {
+  const [modalProyect, setModalProyect] = useState(false);
+
   return (
     <main
       className={`${
@@ -32,9 +35,53 @@ function Proyects({ isShowInfo }) {
           Trabajos y proyectos a lo largo de mi trayectoria
         </h5>
       </div>
-      <div className="grid grid-cols-[repeat(auto-fit,_350px)] justify-center gap-5 pb-10  max-w-[1100px] mx-auto my-auto ">
-        {proyectsList.map((proyect, index) => (
+      <div className="flex bg-red-800 w-min mx-auto mb-4 border rounded-md overflow-hidden [&>button]:transition-all  ">
+        <button
+          onClick={() => setModalProyect(false)}
+          className={`text-2xl text-white  p-4 hover:bg-red-900 hover:text-white ${
+            modalProyect
+              ? "bg-red-800  "
+              : "bg-black text-white dark:bg-white  dark:text-black"
+          }`}
+        >
+          Frontend
+        </button>
+        <span className="border w-[1px]"></span>
+        <button
+          onClick={() => setModalProyect(true)}
+          className={`text-2xl text-white  p-4 hover:bg-red-900 hover:text-white ${
+            modalProyect
+              ? "bg-black text-white dark:bg-white dark:text-black"
+              : "bg-red-800"
+          }`}
+        >
+          Backend
+        </button>
+      </div>
+      <div
+        className={`grid grid-cols-[repeat(auto-fit,_350px)] justify-center gap-5  max-w-[1100px] mx-auto my-auto ${
+          modalProyect
+            ? "opacity-0 h-0 overflow-hidden invisible"
+            : " visible opacity-100 h-auto pb-10"
+        }  transition-all duration-300 `}
+      >
+        {proyectsListFront.map((proyect, index) => (
           <ProyectsCard proyect={proyect} key={index} />
+        ))}
+      </div>
+      <div
+        className={`grid grid-cols-[repeat(auto-fit,_350px)] justify-center gap-5  max-w-[1100px] mx-auto my-auto ${
+          modalProyect
+            ? "visible opacity-100 h-auto pb-10"
+            : " opacity-0 h-0 overflow-hidden invisible"
+        }  transition-all duration-300 `}
+      >
+        {proyectsListBack.map((proyect, index) => (
+          <ProyectsCard
+            proyect={proyect}
+            key={index}
+            modalProyect={modalProyect}
+          />
         ))}
       </div>
     </main>

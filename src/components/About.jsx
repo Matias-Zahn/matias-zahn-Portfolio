@@ -11,7 +11,7 @@ function About({ isShowInfo }) {
           : "opacity-0  translate-y-full invisible h-0  overflow-hidden "
       } transition-all duration-500 text-black  dark:text-white `}
     >
-      <section className="grid gap-10 md:grid-cols-2 mx-auto max-w-7xl p-4 items-center">
+      <section className="grid gap-10 md:grid-cols-2 mx-auto max-w-7xl  p-4 items-center">
         <PerfilImage />
 
         <div className="grid gap-4 mt-">

@@ -20,10 +20,8 @@ function Settings({ setting, handleChangeTheme, theme, handleShowSetting }) {
       </h1>
 
       <div
-        className={`absolute z-10 bottom-[-10%] md:bottom-[-85%] md:left-[-50%] rounded-md grid gap-2 bg-yellow-400 text-black transition-all ${
-          setting
-            ? " opacity-100  visible "
-            : " opacity-0  overflow-x-hidden h-0"
+        className={`absolute z-10 bottom-[-10%] md:bottom-[-85%] md:left-[-50%] rounded-md overflow-hidden grid gap-2 bg-yellow-400 text-black transition-all ${
+          setting ? " opacity-100  visible " : " opacity-0  overflow-hidden h-0"
         } `}
       >
         <button
