@@ -1,4 +1,8 @@
-import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconFileCv,
+} from "@tabler/icons-react";
 
 import emailJS from "@emailjs/browser";
 import { useRef } from "react";
@@ -62,6 +66,14 @@ function Contatc({ isShowInfo }) {
               target="blank"
             >
               <IconBrandLinkedin size={40} />
+            </a>
+
+            <a
+              className="hover:text-redP transition-all duration-300 hover:-translate-y-2"
+              download="CV-Matias_Zahn"
+              href="CV-MATIAS_ZAHN.pdf"
+            >
+              <IconFileCv size={40} />
             </a>
           </div>
         </div>

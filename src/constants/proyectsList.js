@@ -18,9 +18,9 @@ const proyectsListFront = [
     tecnologys: ["React", "Javascript", "TailwindCSS"],
   },
   {
-    title: "E-commers",
+    title: "E-commerce",
     description:
-      "Una aplicacion construida con API de spotify, cuenta con un registro e inicio de sesion, ademas de poder escuchar y compartir musica con tus amigos",
+      "Proyecto basado en los fundamentos de la programacion, en el cual se recrea un e-commerce de indumentaria ",
     img: "/ProyectsImg/e-commers.png",
     url: "https://matias-zahn-e-commers.vercel.app/",
     urlGit: "https://github.com/Matias-Zahn/Matias_Zahn_E-commers",
@@ -29,7 +29,7 @@ const proyectsListFront = [
   {
     title: "Rick and Morty",
     description:
-      "Una aplicacion construida con API de spotify, cuenta con un registro e inicio de sesion, ademas de poder escuchar y compartir musica con tus amigos",
+      "Una aplicación construida con API de 'Rick and Morty', podras encontrar a todos los personajes de la serie, saber su ubicación y ¡mucho más!",
     img: "/ProyectsImg/rick.png",
     url: "https://rick-and-morty-api-beta-silk.vercel.app/",
     urlGit: "https://github.com/Matias-Zahn/RickAndMorty-API",
@@ -38,7 +38,7 @@ const proyectsListFront = [
   {
     title: "CRUD de Usuarios",
     description:
-      "Una aplicacion construida con API de spotify, cuenta con un registro e inicio de sesion, ademas de poder escuchar y compartir musica con tus amigos",
+      "API capaz de poder crear y guardar tus usuarios, tendras acceso para actualizarlos y elimanarlos",
     img: "/ProyectsImg/Crud.png",
     url: "https://crud-users-sooty.vercel.app/",
     urlGit: "https://github.com/Matias-Zahn/CRUD-Users",
@@ -47,7 +47,7 @@ const proyectsListFront = [
   {
     title: "Clima APP",
     description:
-      "Una aplicacion construida con API de spotify, cuenta con un registro e inicio de sesion, ademas de poder escuchar y compartir musica con tus amigos",
+      "Una aplicacion construida con API de 'OpenWeather', podras saber la temperatura y la velocidad de viento de las ciudades que desees",
     img: "/ProyectsImg/clima.png",
     url: "https://app-weather-rust.vercel.app/",
     urlGit: "https://github.com/Matias-Zahn/app-weather",
@@ -55,17 +55,16 @@ const proyectsListFront = [
   },
   {
     title: "Frases Astrologicas",
-    description:
-      "Una aplicacion construida con API de spotify, cuenta con un registro e inicio de sesion, ademas de poder escuchar y compartir musica con tus amigos",
+    description: "Podras ver grandes frases sobre el Universo",
     img: "/ProyectsImg/Frases.png",
     url: "https://random-phrases-nine.vercel.app/",
     urlGit: "https://github.com/Matias-Zahn/random-phrases",
     tecnologys: ["React", "Javascript", "TailwindCSS"],
   },
   {
-    title: "Fronted Mentor",
+    title: "Frontend Mentor",
     description:
-      "Una aplicacion construida con API de spotify, cuenta con un registro e inicio de sesion, ademas de poder escuchar y compartir musica con tus amigos",
+      "Reto de 'Frontend mentor' donde se puso en practica el modelo de caja de la web con FLEX y GRID",
     img: "/ProyectsImg/frontMentor.png",
     url: "https://news-pages.vercel.app/",
     urlGit: "https://github.com/Matias-Zahn/Card-Frontend",

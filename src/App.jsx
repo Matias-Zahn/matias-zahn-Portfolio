@@ -1,4 +1,8 @@
-import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconFileCv,
+} from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import About from "./components/About";
 import ButtomsChanges from "./components/ButtomsChanges";
@@ -120,6 +124,14 @@ function App() {
               </div>
 
               <div className="realtive z-10 flex items-center justify-center mt-5 md:mr-10  gap-5">
+                <a
+                  className="hover:text-redP transition-all duration-300 hover:-translate-y-2"
+                  download="CV-Matias_Zahn"
+                  href="CV-MATIAS_ZAHN.pdf"
+                >
+                  <IconFileCv size={40} />
+                </a>
+
                 <a
                   className="hover:text-redP transition-all duration-300 hover:-translate-y-2"
                   href="https://github.com/Matias-Zahn"

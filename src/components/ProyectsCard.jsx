@@ -69,7 +69,7 @@ function ProyectsCard({ proyect, modalProyect }) {
             target="blank"
           >
             {" "}
-            <IconBrandGithub />
+            <IconBrandGithub className="animate-bounce" />
           </a>
           <a
             className={`p-2 bg-black border-white border rounded-full hover:bg-white hover:text-black transition-all ${
@@ -79,7 +79,7 @@ function ProyectsCard({ proyect, modalProyect }) {
             target="blank"
           >
             {" "}
-            {!modalProyect && <IconBrandVercel />}
+            {!modalProyect && <IconBrandVercel className="animate-bounce" />}
           </a>
         </div>
       </div>
