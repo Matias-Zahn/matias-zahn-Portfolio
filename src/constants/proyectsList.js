@@ -45,7 +45,7 @@ const proyectsListFront = [
     tecnologys: ["React", "Javascript", "TailwindCSS"],
   },
   {
-    title: "Clima APP",
+    title: "Clíma APP",
     description:
       "Una aplicacion construida con API de 'OpenWeather', podras saber la temperatura y la velocidad de viento de las ciudades que desees",
     img: "/ProyectsImg/clima.png",
@@ -54,7 +54,7 @@ const proyectsListFront = [
     tecnologys: ["React", "Javascript", "TailwindCSS"],
   },
   {
-    title: "Frases Astrologicas",
+    title: "Frases Astrológicas",
     description: "Podras ver grandes frases sobre el Universo",
     img: "/ProyectsImg/Frases.png",
     url: "https://random-phrases-nine.vercel.app/",
