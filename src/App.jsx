@@ -87,7 +87,7 @@ function App() {
               <div className="flex items-center">
                 <img
                   className="relative left-[-15%] max-w-[180px] md:max-w-none"
-                  src="/logo.png"
+                  src="/Perfil/logo.png"
                   alt=""
                 />
                 <h3 className="text-2xl uppercase text-redP">Anonyms</h3>
