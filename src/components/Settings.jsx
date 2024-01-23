@@ -1,16 +1,20 @@
-import {
-  IconLanguage,
-  IconMoon,
-  IconSettings,
-  IconSun,
-} from "@tabler/icons-react";
+import { IconSettings } from "@tabler/icons-react";
+import SettingsModal from "../layouts/SettingsModal";
 
-function Settings({ setting, handleChangeTheme, theme, handleShowSetting }) {
+function Settings({
+  setting,
+  handleChangeTheme,
+  theme,
+  handleShowSetting,
+  setEnglish,
+  english,
+  setSetting,
+}) {
   return (
-    <div className=" flex flex-col md:flex-row justify-center items-center gap-4 relative">
+    <div className=" flex flex-col md:flex-row justify-center items-center gap-4 relative z-50">
       <IconSettings
         size={40}
-        className={`hover:text-yellow-400 transition-colors cursor-pointer ${
+        className={`dark:hover:text-yellow-400 hover:text-yellow-400  transition-colors cursor-pointer ${
           setting ? "text-yellow-400" : "text-black dark:text-white"
         }`}
         onClick={handleShowSetting}
@@ -19,23 +23,14 @@ function Settings({ setting, handleChangeTheme, theme, handleShowSetting }) {
         Matias <span>Zahn</span>
       </h1>
 
-      <div
-        className={`absolute z-10 bottom-[-10%] md:bottom-[-85%] md:left-[-50%] rounded-md overflow-hidden grid gap-2 bg-yellow-400 text-black transition-all ${
-          setting ? " opacity-100  visible " : " opacity-0  overflow-hidden h-0"
-        } `}
-      >
-        <button
-          onClick={handleChangeTheme}
-          className="flex  gap-4 hover:bg-black hover:text-white p-4 px-5 transition-colors"
-        >
-          <h4>{theme === "dark" ? "Dark Mode" : " Light Mode"} </h4>
-          {theme === "dark" ? <IconMoon /> : <IconSun />}
-        </button>
-        <button className="flex justify-between hover:bg-black hover:text-white p-4 px-5 transition-colors">
-          <h4>English</h4>
-          <IconLanguage />
-        </button>
-      </div>
+      <SettingsModal
+        english={english}
+        handleChangeTheme={handleChangeTheme}
+        setEnglish={setEnglish}
+        setting={setting}
+        theme={theme}
+        setSetting={setSetting}
+      />
     </div>
   );
 }

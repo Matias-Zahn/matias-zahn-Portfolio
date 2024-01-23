@@ -1,8 +1,15 @@
 import { useState } from "react";
-import { proyectsListBack, proyectsListFront } from "../constants/proyectsList";
+import {
+  proyectsListBack,
+  proyectsListBackEn,
+  proyectsListFront,
+  proyectsListFrontEn,
+} from "../constants/proyectsList";
+
+import { proyect } from "../constants/proyect";
 import ProyectsCard from "./ProyectsCard";
 
-function Proyects({ isShowInfo }) {
+function Proyects({ isShowInfo, english }) {
   const [modalProyect, setModalProyect] = useState(false);
 
   return (
@@ -14,9 +21,11 @@ function Proyects({ isShowInfo }) {
       } transition-all duration-500  text-black dark:text-white `}
     >
       <div className="grid justify-center text-center gap-6 mb-10">
-        <h3 className="text-4xl">Tecnologías </h3>
+        <h3 className="text-4xl">
+          {english ? proyect[0].eN.title : proyect[0].eS.title}
+        </h3>
         <h5 className="text-black/60 dark:text-white/50 text-2xl">
-          Tecnologías que uso diariamente
+          {english ? proyect[0].eN.subTitle : proyect[0].eS.subTitle}
         </h5>
 
         <div className="flex flex-wrap justify-center gap-8 text-redP/50">
@@ -30,9 +39,11 @@ function Proyects({ isShowInfo }) {
         </div>
       </div>
       <div className="grid justify-center text-center gap-4 mb-5">
-        <h3 className="text-4xl">Proyectos </h3>
+        <h3 className="text-4xl">
+          {english ? proyect[0].eN.proyects : proyect[0].eS.proyects}{" "}
+        </h3>
         <h5 className="text-black/60 dark:text-white/50 text-2xl">
-          Trabajos y proyectos a lo largo de mi trayectoria
+          {english ? proyect[0].eN.subProyect : proyect[0].eS.subProyect}
         </h5>
       </div>
       <div className="flex bg-red-800 w-min mx-auto mb-4 border rounded-md overflow-hidden [&>button]:transition-all  ">
@@ -65,9 +76,13 @@ function Proyects({ isShowInfo }) {
             : " visible opacity-100 h-auto pb-10"
         }  transition-all duration-300 `}
       >
-        {proyectsListFront.map((proyect, index) => (
-          <ProyectsCard proyect={proyect} key={index} />
-        ))}
+        {english
+          ? proyectsListFrontEn.map((proyect, index) => (
+              <ProyectsCard proyect={proyect} key={index} />
+            ))
+          : proyectsListFront.map((proyect, index) => (
+              <ProyectsCard proyect={proyect} key={index} />
+            ))}
       </div>
       <div
         className={`grid grid-cols-[repeat(auto-fit,_350px)] justify-center gap-5  max-w-[1100px] mx-auto my-auto ${
@@ -76,13 +91,21 @@ function Proyects({ isShowInfo }) {
             : " opacity-0 h-0 overflow-hidden invisible"
         }  transition-all duration-300 `}
       >
-        {proyectsListBack.map((proyect, index) => (
-          <ProyectsCard
-            proyect={proyect}
-            key={index}
-            modalProyect={modalProyect}
-          />
-        ))}
+        {english
+          ? proyectsListBackEn.map((proyect, index) => (
+              <ProyectsCard
+                proyect={proyect}
+                key={index}
+                modalProyect={modalProyect}
+              />
+            ))
+          : proyectsListBack.map((proyect, index) => (
+              <ProyectsCard
+                proyect={proyect}
+                key={index}
+                modalProyect={modalProyect}
+              />
+            ))}
       </div>
     </main>
   );

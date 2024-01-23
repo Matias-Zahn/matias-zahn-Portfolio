@@ -9,8 +9,9 @@ import { useRef } from "react";
 import { useState } from "react";
 import Loader from "../layouts/Loader";
 import { Toaster, toast } from "sonner";
+import { contact } from "../constants/contact";
 
-function Contatc({ isShowInfo }) {
+function Contatc({ isShowInfo, english }) {
   const refForm = useRef();
 
   const [isLoadingForm, setIsLoadingForm] = useState(false);
@@ -47,10 +48,10 @@ function Contatc({ isShowInfo }) {
       <section className="grid md:grid-cols-2 px-3 place-items-center max-w-7xl mx-auto mb-10 gap-10 ">
         <div className=" grid gap-5 ">
           <h3 className="text-3xl font-semibold text-center md:text-start   text-redP">
-            ¿Satisfecho conmigo?
+            {english ? contact[0].eN.title : contact[0].eS.title}
           </h3>
           <h5 className="text-xl font-medium">
-            Por favor, ponte en contacto conmigo
+            {english ? contact[0].eN.subTitle : contact[0].eS.subTitle}
           </h5>
           <div className="flex gap-5 justify-around md:justify-start">
             <a
@@ -79,7 +80,7 @@ function Contatc({ isShowInfo }) {
         </div>
         <div className="grid gap-4 mb-10">
           <h3 className="text-2xl font-medium">
-            Contáctame, hagamos magia juntos
+            {english ? contact[0].eN.contact : contact[0].eS.contact}
           </h3>
           <form ref={refForm} onSubmit={handleSubmit} className="grid gap-4">
             <input
@@ -87,7 +88,7 @@ function Contatc({ isShowInfo }) {
               name="username"
               type="text"
               required
-              placeholder="Nombre"
+              placeholder={english ? "Name" : "Nombre"}
             />
             <input
               className="bg-white/10 p-4 rounded-2xl outline-none  "
@@ -101,11 +102,15 @@ function Contatc({ isShowInfo }) {
               name="message"
               type="text"
               required
-              placeholder="Mensaje"
+              placeholder={english ? "Message" : "Mensaje"}
             />
 
             <button className="bg-redP font-medium md:w-72 py-2 rounded-[1rem] px-8 hover:bg-redP/50 transition-colors grid place-items-center">
-              {isLoadingForm ? <Loader /> : <p>Enviar</p>}
+              {isLoadingForm ? (
+                <Loader />
+              ) : (
+                <p> {english ? "Send" : "Enviar"} </p>
+              )}
             </button>
           </form>
         </div>

@@ -1,8 +1,9 @@
 import { infoList, infoListPro } from "../constants/infoAboutList";
 import PathCard from "./PathCard";
 import PerfilImage from "./PerfilImage";
+import { aboutMe } from "../constants/aboutMe";
 
-function About({ isShowInfo }) {
+function About({ isShowInfo, english }) {
   return (
     <main
       className={`${
@@ -11,41 +12,39 @@ function About({ isShowInfo }) {
           : "opacity-0  translate-y-full invisible h-0  overflow-hidden "
       } transition-all duration-500 text-black  dark:text-white `}
     >
-      <section className="grid gap-10 md:grid-cols-2 mx-auto max-w-7xl  p-4 items-center">
+      <section className="grid gap-10 md:grid-cols-2 mx-auto max-w-5xl  p-4 items-center">
         <PerfilImage />
 
-        <div className="grid gap-4 mt-">
-          <h2 className="text-2xl text-[#FF2B51]">Sobre mí</h2>
-          <h1 className="text-5xl">Matias Sebastian Zahn</h1>
+        <div className="grid gap-4">
+          <h2 className="text-2xl text-redP">
+            {english ? aboutMe[0].eN.about.title : aboutMe[0].eS.about.title}
+          </h2>
+          <h1 className="text-4xl">Matias Sebastian Zahn</h1>
           <div className="leading-relaxed grid gap-2">
-            <p>
-              Me destaco por tener una gran pasión por la programacion y el
-              aprendizaje. Mi enfoque proactivo me ha ayudado a poder
-              desarrollar diferentes proyectos personales y profesionales.
-            </p>
-            <p>
-              Actualmente, cuento con experiencias en tecnologías que me
-              destacan como un programador full stack. Mi trayectoria abarca
-              tanto el desarrollo del lado del cliente como del servidor,
-              permitiéndome crear soluciones integrales y versátiles.
-            </p>
-            <p>
-              Estoy emocionado por la oportunidad de aplicar mis habilidades y
-              conocimientos en un entorno dinámico y desafiante, contribuyendo
-              al crecimiento y la excelencia de su organización.
-            </p>
+            {english
+              ? aboutMe[0].eN.about.description
+              : aboutMe[0].eS.about.description}
           </div>
         </div>
       </section>
 
       <section className="mt-20 p-4">
         <h2 className="text-5xl  font-extrabold text-center mb-10">
-          Mi camino{" "}
+          {english ? aboutMe[0].eN.path.title : aboutMe[0].eS.path.title}
         </h2>
         <div className="grid md:grid-cols-2 items-center   gap-10  max-w-[1500px] mx-auto my-auto">
           <div className="grid gap-4">
-            <h4 className="text-3xl text-center ">Área Profesional</h4>
-            <h5 className="text-white/50 text-center">Exeperiencia Laboral</h5>
+            <h4 className="text-3xl text-center ">
+              {english
+                ? aboutMe[0].eN.path.area[0]
+                : aboutMe[0].eS.path.area[0]}
+            </h4>
+            <h5 className="text-white/50 text-center">
+              {" "}
+              {english
+                ? aboutMe[0].eN.path.experencie[0]
+                : aboutMe[0].eS.path.experencie[0]}
+            </h5>
             <div className="grid gap-5">
               {infoListPro.map((professional, index) => (
                 <PathCard key={index} academy={professional} />
@@ -53,8 +52,18 @@ function About({ isShowInfo }) {
             </div>
           </div>
           <div className="grid gap-4">
-            <h4 className="text-3xl text-center">Área Académica</h4>
-            <h5 className="text-white/50 text-center">Desarrollo web</h5>
+            <h4 className="text-3xl text-center">
+              {" "}
+              {english
+                ? aboutMe[0].eN.path.area[1]
+                : aboutMe[0].eS.path.area[1]}
+            </h4>
+            <h5 className="text-white/50 text-center">
+              {" "}
+              {english
+                ? aboutMe[0].eN.path.experencie[1]
+                : aboutMe[0].eS.path.experencie[1]}
+            </h5>
             <div className="grid gap-5">
               {infoList.map((academy, index) => (
                 <PathCard key={index} academy={academy} />

@@ -1,4 +1,4 @@
-function ButtomsChanges({ isShowInfo, handleChange }) {
+function ButtomsChanges({ isShowInfo, handleChange, english }) {
   return (
     <div className="relative z-20 flex flex-col   md:flex-row gap-4 lg:gap-10 text-3xl">
       {isShowInfo !== "Home" && (
@@ -13,7 +13,7 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
           onClick={handleChange}
           value={"Home"}
         >
-          Inicio
+          {english ? "Home" : "Inicio"}
         </button>
       )}
       <button
@@ -27,7 +27,7 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
         onClick={handleChange}
         value={"About"}
       >
-        Sobre Mi
+        {english ? "About Me" : "Sobre Mí"}
         <div
           className={
             isShowInfo === "About"
@@ -49,7 +49,7 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
         onClick={handleChange}
         value={"Proyects"}
       >
-        Proyectos
+        {english ? "Proyects" : "Proyectos"}
         <div
           className={
             isShowInfo === "Proyects"
@@ -71,7 +71,7 @@ function ButtomsChanges({ isShowInfo, handleChange }) {
         onClick={handleChange}
         value={"Contact"}
       >
-        Contacto
+        {english ? "Contact" : "Contacto"}
         <div
           className={
             isShowInfo === "Contact"
