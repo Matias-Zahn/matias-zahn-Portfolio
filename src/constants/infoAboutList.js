@@ -23,7 +23,7 @@ const infoList = [
   },
   {
     title: "Academlo",
-    information: "Desarrollador Web Full'Stack",
+    information: "Desarrollador Web Full Stack",
     duration: "7 Meses",
     month: "July 2023 /January 2024",
     titulation: "https://certiwise.co/verify/507",
