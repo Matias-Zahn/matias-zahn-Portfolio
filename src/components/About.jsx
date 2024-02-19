@@ -32,7 +32,7 @@ function About({ isShowInfo, english }) {
         <h2 className="text-5xl  font-extrabold text-center mb-10">
           {english ? aboutMe[0].eN.path.title : aboutMe[0].eS.path.title}
         </h2>
-        <div className="grid md:grid-cols-2 items-center   gap-10  max-w-[1500px] mx-auto my-auto">
+        <div className="grid md:grid-cols-2 items-start  gap-10  max-w-[1500px] mx-auto ">
           <div className="grid gap-4">
             <h4 className="text-3xl text-center ">
               {english

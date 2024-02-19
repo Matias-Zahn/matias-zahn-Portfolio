@@ -28,7 +28,7 @@ function Proyects({ isShowInfo, english }) {
           {english ? proyect[0].eN.subTitle : proyect[0].eS.subTitle}
         </h5>
 
-        <div className="flex flex-wrap justify-center gap-8 text-redP/50">
+        <div className="flex flex-wrap max-w-2xl justify-center gap-8 text-redP/50">
           <img src="/Icons/React.png" alt="" />
           <img src="/Icons/Javascript.png" alt="" />
           <img src="/Icons/Css.png" alt="" />
@@ -36,6 +36,10 @@ function Proyects({ isShowInfo, english }) {
           <img src="/Icons/Github.png" alt="" />
           <img src="/Icons/Git.png" alt="" />
           <img src="/Icons/TailwindCSS.png" alt="" />
+          <img src="/Icons/Redux.png" alt="" />
+          <img src="/Icons/Node.png" alt="" />
+          <img src="/Icons/Express.png" alt="" />
+          <img src="/Icons/Postgres.png" alt="" />
         </div>
       </div>
       <div className="grid justify-center text-center gap-4 mb-5">

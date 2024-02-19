@@ -8,10 +8,25 @@ const infoList = [
   },
   {
     title: "Academlo",
-    information: "Modulo Frontend con React-JS",
+    information: "Modulo Frontend con React.js",
     duration: "7 semanas",
     month: "Septiembre 2023 /Noviembre",
     titulation: "https://certiwise.co/verify/203",
+  },
+
+  {
+    title: "Academlo",
+    information: "Modulo Backend con Node.js",
+    duration: "7 semanas",
+    month: "Noviembre 2023 /Enero 2024",
+    titulation: "https://certiwise.co/verify/495",
+  },
+  {
+    title: "Academlo",
+    information: "Desarrollador Web Full'Stack",
+    duration: "7 Meses",
+    month: "July 2023 /January 2024",
+    titulation: "https://certiwise.co/verify/507",
   },
 ];
 
@@ -20,15 +35,29 @@ const infoListEn = [
     title: "Academlo",
     information: "Fundaments module with HTML, CSS y JavaScript",
     duration: "7 weeks",
-    month: "August 2023 /September",
+    month: "August 2023 /September 2023",
     titulation: "https://certificates.academlo.com/en/verify/41517283406056",
   },
   {
     title: "Academlo",
-    information: "MOdule Frontend with React-JS",
+    information: "Module Frontend with React.js",
     duration: "7 weeks",
-    month: "September 2023 /November",
+    month: "September 2023 /November 2023",
     titulation: "https://certiwise.co/verify/203",
+  },
+  {
+    title: "Academlo",
+    information: "Module Backend with Node.js",
+    duration: "7 weeks",
+    month: "November 2023 /January 2024",
+    titulation: "https://certiwise.co/verify/495",
+  },
+  {
+    title: "Academlo",
+    information: "Full Stack Web Development",
+    duration: "7 months",
+    month: "July 2023 /January 2024",
+    titulation: "https://certiwise.co/verify/507",
   },
 ];
 
