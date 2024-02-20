@@ -89,7 +89,7 @@ function Proyects({ isShowInfo, english }) {
             ))}
       </div>
       <div
-        className={`grid grid-cols-[repeat(auto-fit,_350px)] justify-center gap-5  max-w-[1100px] mx-auto my-auto ${
+        className={`grid grid-cols-[repeat(auto-fit,_350px)] justify-center   gap-5  mx-auto my-auto ${
           modalProyect
             ? "visible opacity-100 h-auto pb-10"
             : " opacity-0 h-0 overflow-hidden invisible"

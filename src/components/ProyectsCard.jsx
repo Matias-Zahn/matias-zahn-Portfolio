@@ -1,5 +1,6 @@
 import {
   IconBrandCss3,
+  IconBrandFirebase,
   IconBrandGithub,
   IconBrandHtml5,
   IconBrandJavascript,
@@ -25,6 +26,7 @@ function ProyectsCard({ proyect, modalProyect }) {
     Express: <IconBrandNodejs />,
     Sequelize: <IconDialpad />,
     PostgreSQL: <IconDatabase />,
+    FireBase: <IconBrandFirebase />,
   };
 
   return (

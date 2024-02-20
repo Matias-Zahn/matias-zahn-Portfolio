@@ -148,6 +148,15 @@ const proyectsListFrontEn = [
 
 const proyectsListBack = [
   {
+    title: "Clínica Veterinaria",
+    description:
+      "La aplicación para la Clínica Veterinaria tiene como objetivo facilitar la gestión de citas médicas para mascotas y proporcionar un sistema eficiente para el equipo médico y los usuarios. La plataforma se enfoca en la reserva de citas, conectando a propietarios de mascotas con médicos veterinarios de manera sencilla y efectiva.",
+    img: "/ProyectsImgBack/clinica.png",
+    url: null,
+    urlGit: "https://github.com/Matias-Zahn/PET-CLINIC.git",
+    tecnologys: ["Node", "Express", "Sequelize", "PostgreSQL", "FireBase"],
+  },
+  {
     title: "Reparaciones Academlo",
     description:
       "API capaz de agendar citas para los usuarios, y que los empleados puedan actualizar cuando los motocicletas ya estén listos para que los recojan.",
@@ -177,6 +186,15 @@ const proyectsListBack = [
 ];
 
 const proyectsListBackEn = [
+  {
+    title: "Pet Clinic",
+    description:
+      "The application for the Veterinary Clinic aims to facilitate the management of medical appointments for pets and provide an efficient system for the medical team and users. The platform focuses on appointment scheduling, connecting pet owners with veterinarians in a simple and effective manner.",
+    img: "/ProyectsImgBack/clinica.png",
+    url: null,
+    urlGit: "https://github.com/Matias-Zahn/PET-CLINIC.git",
+    tecnologys: ["Node", "Express", "Sequelize", "PostgreSQL", "FireBase"],
+  },
   {
     title: "Reparaciones Academlo",
     description:
