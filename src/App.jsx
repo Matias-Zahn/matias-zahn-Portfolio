@@ -54,7 +54,9 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
-    setLoader(false);
+    setTimeout(() => {
+      setLoader(false);
+    }, 1000);
   }, []);
   return (
     <>

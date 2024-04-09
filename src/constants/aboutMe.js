@@ -17,7 +17,7 @@ const aboutMe = [
       about: {
         title: "Sobre mí",
         description:
-          "Me destaco por tener una gran pasión por la programacion y el aprendizaje. Mi enfoque proactivo me ha ayudado a poder desarrollar diferentes proyectos personales y profesionales. Actualmente, cuento con experiencias en tecnologías que me destacan como un programador full stack. Mi trayectoria abarca tanto el desarrollo del lado del cliente como del servidor, permitiéndome crear soluciones integrales y versátiles. Estoy emocionado por la oportunidad de aplicar mis habilidades y conocimientos en un entorno dinámico y desafiante, contribuyendo al crecimiento y la excelencia de su organización.",
+          "Me destaco por tener una gran pasión por la programación y el aprendizaje. Mi enfoque proactivo me ha ayudado a desarrollar diferentes proyectos personales y profesionales. Actualmente, cuento con experiencia en tecnologías que me destacan como un programador full stack. Mi trayectoria abarca tanto el desarrollo del lado del cliente como del servidor, lo que me permite crear soluciones integrales y versátiles. Estoy emocionado por la oportunidad de aplicar mis habilidades y conocimientos en un entorno dinámico y desafiante, contribuyendo al crecimiento y la excelencia de su organización.",
       },
       path: {
         title: "Mi camino",

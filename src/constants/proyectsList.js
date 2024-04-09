@@ -168,7 +168,7 @@ const proyectsListBack = [
   {
     title: "Comidas Academlo",
     description:
-      "API que posibilita a los usuarios realizar pedidos de comida en restaurantes. Además, tendrá la opción de dejar su comentario/opinión respecto al servicio y la comida ofrecida por el restaurante.",
+      "API que posibilita a los usuarios realizar pedidos de comida en restaurantes. Además, tendrá la opción de dejar su opinión respecto al servicio y la comida ofrecida por el restaurante.",
     img: "/ProyectsImgBack/academloMeals.png",
     url: null,
     urlGit: "https://github.com/Matias-Zahn/Academlo-Meals.git",
