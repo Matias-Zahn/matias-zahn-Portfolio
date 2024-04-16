@@ -1,5 +1,6 @@
 import {
   IconBrandCss3,
+  IconBrandDocker,
   IconBrandFirebase,
   IconBrandGithub,
   IconBrandHtml5,
@@ -7,7 +8,9 @@ import {
   IconBrandNodejs,
   IconBrandReact,
   IconBrandTailwind,
+  IconBrandTypescript,
   IconBrandVercel,
+  IconCat,
   IconDatabase,
   IconDialpad,
 } from "@tabler/icons-react";
@@ -27,6 +30,9 @@ function ProyectsCard({ proyect, modalProyect }) {
     Sequelize: <IconDialpad />,
     PostgreSQL: <IconDatabase />,
     FireBase: <IconBrandFirebase />,
+    Nest: <IconCat />,
+    TypeScript: <IconBrandTypescript />,
+    Docker: <IconBrandDocker />,
   };
 
   return (

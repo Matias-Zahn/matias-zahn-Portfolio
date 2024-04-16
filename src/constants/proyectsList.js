@@ -148,6 +148,25 @@ const proyectsListFrontEn = [
 
 const proyectsListBack = [
   {
+    title: "Teslo Shop",
+    description:
+      "API RESTful para un ecommerse. Tiene como objetivo la creacion de usuarios y productos, ademas de la insercion de imagenes para susodichos productos.",
+    img: "/ProyectsImgBack/teslo.png",
+    url: null,
+    urlGit: "https://github.com/Matias-Zahn/teslo-nest",
+    tecnologys: ["Nest", "TypeScript", "Docker", "PostgreSQL"],
+  },
+
+  {
+    title: "Clínica Nest",
+    description:
+      "Tomando el eje tematica de la 'Clínica Veterinaria', esta vez con Nest.js y TypeScript. Utiliza Docker para contenerizar y TypeORM para comunicarse con la Base de datos Postgres",
+    img: "/ProyectsImgBack/clinica-nest.png",
+    url: null,
+    urlGit: "https://github.com/Matias-Zahn/Veterinary-clinic",
+    tecnologys: ["Nest", "TypeScript", "Docker", "PostgreSQL"],
+  },
+  {
     title: "Clínica Veterinaria",
     description:
       "La aplicación para la Clínica Veterinaria tiene como objetivo facilitar la gestión de citas médicas para mascotas y proporcionar un sistema eficiente para el equipo médico y los usuarios. La plataforma se enfoca en la reserva de citas, conectando a propietarios de mascotas con médicos veterinarios de manera sencilla y efectiva.",
@@ -157,7 +176,7 @@ const proyectsListBack = [
     tecnologys: ["Node", "Express", "Sequelize", "PostgreSQL", "FireBase"],
   },
   {
-    title: "Reparaciones Academlo",
+    title: "Reparaciones Motores",
     description:
       "API capaz de agendar citas para los usuarios, y que los empleados puedan actualizar cuando los motocicletas ya estén listos para que los recojan.",
     img: "/ProyectsImgBack/academloRepairs.png",
@@ -166,7 +185,7 @@ const proyectsListBack = [
     tecnologys: ["Node", "Express", "Sequelize", "PostgreSQL"],
   },
   {
-    title: "Comidas Academlo",
+    title: "Restaurante y comidas",
     description:
       "API que posibilita a los usuarios realizar pedidos de comida en restaurantes. Además, tendrá la opción de dejar su opinión respecto al servicio y la comida ofrecida por el restaurante.",
     img: "/ProyectsImgBack/academloMeals.png",
@@ -175,7 +194,7 @@ const proyectsListBack = [
     tecnologys: ["Node", "Express", "Sequelize", "PostgreSQL"],
   },
   {
-    title: "Banco Academlo",
+    title: "Banco API",
     description:
       "API que recrea un sistema bancario donde los usuarios podran recibir y enviar dinero a otras cuentas",
     img: "/ProyectsImgBack/academloBank.png",
@@ -186,6 +205,25 @@ const proyectsListBack = [
 ];
 
 const proyectsListBackEn = [
+  {
+    title: "Teslo Shop",
+    description:
+      "RESTful API for an e-commerce platform. Its goal is to create users and products, as well as to insert images for said products.",
+    img: "/ProyectsImgBack/teslo.png",
+    url: null,
+    urlGit: "https://github.com/Matias-Zahn/teslo-nest",
+    tecnologys: ["Nest", "TypeScript", "Docker", "PostgreSQL"],
+  },
+
+  {
+    title: "Veterinary Nest",
+    description:
+      "Taking the thematic axis of the 'Veterinary Clinic', this time with Nest.js and TypeScript. Use Docker to containerize and TypeORM to communicate with the PostgreSQL database.",
+    img: "/ProyectsImgBack/clinica-nest.png",
+    url: null,
+    urlGit: "https://github.com/Matias-Zahn/Veterinary-clinic",
+    tecnologys: ["Nest", "TypeScript", "Docker", "PostgreSQL"],
+  },
   {
     title: "Pet Clinic",
     description:
