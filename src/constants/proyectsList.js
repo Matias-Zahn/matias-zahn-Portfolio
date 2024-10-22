@@ -9,6 +9,14 @@ const proyectsListFront = [
     tecnologys: ["React", "Javascript", "TailwindCSS"],
   },
   {
+    title: "ITBANK",
+    description:
+      "Proyecto grupal en desarrollo, basado en un sistema bancario que busca realizar diferentes acciones sobre una cuenta de usuario e interacciones sobre otras.",
+    img: "/ProyectsImg/itbank.png",
+    urlGit: "https://github.com/Matias-Zahn/ITBANK-Next.git",
+    tecnologys: ["Next", "Javascript", "CSS"],
+  },
+  {
     title: "Pokedex",
     description:
       "Una enciclopedia que es capaz de encontrar tanto al Pokemon, como sus habilidades, ataques y ¡mucho mas!",
@@ -75,6 +83,15 @@ const proyectsListFront = [
 const proyectsListFrontEn = [
   {
     title: "Spotify",
+    description:
+      "Project based on the developer version of Spotify, featuring user registration and login, as well as the ability to listen to and share music with friends.",
+    img: "/ProyectsImg/spotify.png",
+    url: "https://gift-music.vercel.app/",
+    urlGit: "https://github.com/Matias-Zahn/Spotify",
+    tecnologys: ["React", "Javascript", "TailwindCSS"],
+  },
+  {
+    title: "ITBANK",
     description:
       "Project based on the developer version of Spotify, featuring user registration and login, as well as the ability to listen to and share music with friends.",
     img: "/ProyectsImg/spotify.png",

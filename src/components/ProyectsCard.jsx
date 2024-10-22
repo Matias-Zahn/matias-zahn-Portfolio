@@ -5,6 +5,7 @@ import {
   IconBrandGithub,
   IconBrandHtml5,
   IconBrandJavascript,
+  IconBrandNextjs,
   IconBrandNodejs,
   IconBrandReact,
   IconBrandTailwind,
@@ -33,6 +34,7 @@ function ProyectsCard({ proyect, modalProyect }) {
     Nest: <IconCat />,
     TypeScript: <IconBrandTypescript />,
     Docker: <IconBrandDocker />,
+    Next: <IconBrandNextjs />,
   };
 
   return (
